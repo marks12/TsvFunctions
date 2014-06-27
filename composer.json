@@ -1,0 +1,31 @@
+{
+"name": "marks12/TsvFunctions",
+"description": "Different functions for using in Applications",
+"type":         "library",
+"license":      "BSD-3-Clause",
+"homepage":         "https://github.com/username/TsvFunctions",
+"keywords": [
+"Keyword1",
+"Keyword2",
+         "zf2"
+    ],
+     "authors": [
+          {
+               "name":      "Vladimir Tsarevnikov",
+               "email":     "tsarevnikov.v@gmail.com",
+               "homepage":  "http://serveon.ru/",
+               "role":      "Developer"
+          }
+     ],
+     "minimum-stability": "dev",
+     "require": {
+          "php": ">=5.3.3",
+     },
+     "suggests": {
+     },
+     "autoload": {
+          "psr-0": {
+               "TsvFunctions\\": "src/"
+          }
+     }
+}
