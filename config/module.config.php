@@ -49,7 +49,7 @@ return array(
     ),
 	'view_helpers' => array(
 			'invokables' => array(
-					'substr2' => 'TsvFunctions\View\Helper\Substr2',
+					'substr2' 		=> 'TsvFunctions\View\Helper\Substr2',
 			),
 	),
 		
