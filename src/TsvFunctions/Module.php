@@ -35,12 +35,25 @@ class Module implements AutoloaderProviderInterface
         return include __DIR__ . '/../../config/module.config.php';
     }
 
-//     public function onBootstrap(MvcEvent $e)
-//     {
-//         // You may not need to do this if you're doing it elsewhere in your
-//         // application
-//         $eventManager        = $e->getApplication()->getEventManager();
-//         $moduleRouteListener = new ModuleRouteListener();
-//         $moduleRouteListener->attach($eventManager);
-//     }
+    public function onBootstrap(MvcEvent $e)
+    {
+        // You may not need to do this if you're doing it elsewhere in your
+        // application
+    	$e->getApplication()->getServiceManager()->get('viewhelpermanager')->setFactory('controllerName', function($sm) use ($e) {
+    		$viewHelper = new View\Helper\ControllerName($e->getRouteMatch());
+    		return $viewHelper;
+    	});
+    	
+    	$app = $e->getApplication();
+   		$e->getApplication()->getServiceManager()->get('viewhelpermanager')->setFactory('getRoute', function($sm) use ($app) {
+    		$viewHelper = new View\Helper\getRoute($app);
+    		return $viewHelper;
+   		});
+    	
+    	$eventManager        = $e->getApplication()->getEventManager();
+        $moduleRouteListener = new ModuleRouteListener();
+        $moduleRouteListener->attach($eventManager);
+        
+        
+    }
 }
