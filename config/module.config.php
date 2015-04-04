@@ -51,6 +51,7 @@ return array(
 			'invokables' => array(
 					'substr2' 		=> 'TsvFunctions\View\Helper\Substr2',
 					'money' 		=> 'TsvFunctions\View\Helper\Money',
+					'error' 		=> 'TsvFunctions\View\Helper\Error',
 			),
 	),
 		
