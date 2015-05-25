@@ -56,6 +56,7 @@ return array(
 					'substr2' 		=> 'TsvFunctions\View\Helper\Substr2',
 					'money' 		=> 'TsvFunctions\View\Helper\Money',
 					'error' 		=> 'TsvFunctions\View\Helper\Error',
+					'getDateSelect'	=> 'TsvFunctions\View\Helper\getDateSelect',
 			),
 	),
 		
