@@ -13,7 +13,6 @@ class Error extends AbstractHelper
 		
 		$session = new Container("error");
 		$error = $session->offsetGet("error");
-		$session->offsetUnset("error");
 		
 		$result = '';
 		
@@ -28,6 +27,9 @@ class Error extends AbstractHelper
 			
 			$result = "<br>".$result;
 		}
+
+		$session->offsetUnset("error");
+		
 		
 		$session = new Container("message");
 		$message = $session->offsetGet("message");

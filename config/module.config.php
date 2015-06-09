@@ -46,12 +46,17 @@ return array(
         'template_path_stack' => array(
             'TsvFunctions' => __DIR__ . '/../view',
         ),
+   		'template_map' => array(
+   			'layout/admin'	=> __DIR__ . '/../view/zfc-admin/layout/admin.phtml',
+   			'zfc-admin/admin/index'	=> __DIR__ . '/../view/zfc-admin/admin/index.phtml',
+        ),
     ),
 	'view_helpers' => array(
 			'invokables' => array(
 					'substr2' 		=> 'TsvFunctions\View\Helper\Substr2',
 					'money' 		=> 'TsvFunctions\View\Helper\Money',
 					'error' 		=> 'TsvFunctions\View\Helper\Error',
+					'getDateSelect'	=> 'TsvFunctions\View\Helper\getDateSelect',
 			),
 	),
 		
